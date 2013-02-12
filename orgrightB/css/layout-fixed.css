@@ -1,0 +1,463 @@
+/**
+ * @file
+ * Layout Styling (DIV Positioning)
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout is based on the Zen Columns layout method.
+ *   http://drupal.org/node/201428
+ *
+ * Only CSS that affects the layout (positioning) of major elements should be
+ * listed here.  Such as:
+ *   display, position, float, clear, width, height, min-width, min-height
+ *   margin, border, padding, overflow
+ */
+
+/*
+ * Body
+ */
+body {
+}
+
+#page-outer {
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+  height: auto;
+}
+
+#page-inner {
+  /*position: absolute;*/
+  left: 0px;
+  width: 960px; /* Set the overall width of the page = 0+960+0 */
+  height: auto;
+  min-height: 360px;
+  margin: 0px auto; /* Centre the page on the screen */
+  border: none;
+  padding: 0px;
+  overflow: hidden;
+  text-align: left;
+}
+
+#page-wrapper,
+.region-page-closure {
+  /*
+   * If you want to make the page a fixed width and centered in the viewport,
+   * this is the standards-compliant way to do that. See also the ie6.css file
+   * for the necessary IE5/IE6quirks hack to center a div.
+   */
+  /*margin-left: auto;
+  margin-right: auto;
+  width: 960px;*/
+}
+
+#page {
+}
+
+/*
+ * Header
+ */
+#header {
+  margin: 0px;
+  padding: 2px 0 0 0;
+  border: 0px;
+  min-height: 148px;
+  height: auto !important;
+  height: 148px;
+}
+
+#header .section {
+}
+
+#header-left {
+  float: left;
+  width: 300px;
+}
+
+#header-right {
+  float: right;
+  width: 660px;
+}
+
+#search-box {
+}
+
+.region-header {
+  clear: both; /* Clear the logo */
+}
+
+#name-and-slogan {
+  width: 660px; /* make same as #header-right above */
+}
+
+#loggedin {
+  float: right;
+  margin-top: 10px;
+}
+
+#loggedin ul {
+  margin: 0;
+  padding: 0;
+}
+
+#loggedin ul li {
+  list-style: none;
+  display: inline;
+  margin: 0 0 0 10px;
+  white-space: nowrap;
+}
+
+#loggedin ul li a {
+  text-decoration: underline;
+  /*color:#6a6a6a;*/
+  font-weight: bold;
+}
+
+#loggedin ul li a:hover {
+  text-decoration: none;
+}
+
+/*
+ * Main (container for everything else)
+ */
+#main-wrapper {
+  position: relative;
+}
+
+#main {
+}
+
+/*
+ * Content
+ */
+#content,
+.region-sidebar-first,
+.region-sidebar-second {
+  margin-top: 0;
+}
+
+#content,
+.no-sidebars #content {
+  float: left; /* LTR */
+  width: 960px;
+  margin-left: 0; /* LTR */
+  margin-right: -960px; /* LTR */
+  /* Negative value of #content's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
+}
+
+.sidebar-first #content {
+  width: 760px;
+  margin-left: 200px; /* LTR */
+  /* The width of .region-sidebar-first. */
+  margin-right: -960px; /* LTR */
+  /* Negative value of #content's width + left margin. */
+}
+
+.sidebar-second #content {
+  width: 760px;
+  margin-left: 0; /* LTR */
+  margin-right: -760px; /* LTR */
+  /* Negative value of #content's width + left margin. */
+}
+
+.two-sidebars #content {
+  width: 560px;
+  margin-left: 200px; /* LTR */
+  /* The width of .region-sidebar-first */
+  margin-right: -760px; /* LTR */
+  /* Negative value of #content's width + left margin. */
+}
+
+#content .section {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/*.sidebar-second #content .section {
+  margin: 0;
+  padding: 10px 10px 10px 0;
+  border: none;
+}*/
+
+/*
+ * Navigation
+ */
+#navigation {
+  float: left; /* LTR */
+  width: 960px;
+  margin-left: 0px; /* LTR */
+  margin-right: -960px; /* LTR */
+  /* Negative value of #navigation's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to #navigation .section. */
+  height: 48px;
+  /* The navigation can have any arbritrary height
+                    Set this to the same value as the margin-top below. */
+}
+
+#navigation .section {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  /*min-height:26px;
+  height:auto !important;
+  height:26px;*/
+  height: 48px; /* set to height of navigation above less twice border+padding */
+}
+
+#navigation ul /* Primary and secondary links */  {
+  text-align: left; /* LTR */
+  left: auto;
+  top: auto;
+  padding: 0;
+  margin: 0;
+  border: 0 none #000000;
+  display: inline-block;
+  position: relative;
+  width: auto;
+}
+
+#navigation ul li /* A simple method to get navigation links to appear in one line. */  {
+  float: left; /* LTR */
+  height: 48px;
+  display: block;
+  border: 0 none #000000;
+  padding: 0px;
+}
+
+#navigation ul li a {
+  border: 0 none #000000;
+  padding: 16px 20px 8px;
+  height: 24px;
+  /*width: 120px;*/
+  display: block;
+}
+
+#navigation ul li ul li {
+  height: 32px;
+}
+
+#navigation ul li ul li a {
+  padding: 8px 20px;
+  height: 16px;
+}
+
+/*
+ * First sidebar
+ */
+.region-sidebar-first {
+  float: left; /* LTR */
+  width: 200px;
+  margin-left: 0; /* LTR */
+  margin-right: -200px; /* LTR */
+  /* Negative value of .region-sidebar-first's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
+}
+
+.region-sidebar-first .section {
+  /*margin: 0 20px 0 0;*/
+  /* LTR */
+  /*margin: 0 10px 0 10px;*/
+  /* LTR */
+  /*padding: 0;*/
+  /*padding: 10px 0;*/
+  margin: 0 10px 0 0;
+  padding: 10px 9px 10px 0;
+  border-width: 0 1px 0 0;
+  border-style: solid;
+  border-color: #cccccc;
+}
+
+/*
+ * Second sidebar
+ */
+.region-sidebar-second {
+  float: left; /* LTR */
+  width: 200px;
+  margin-left: 760px; /* LTR */
+  /* Width of content + sidebar-first. */
+  margin-right: -960px; /* LTR */
+  /* Negative value of .region-sidebar-second's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-second .section. */
+}
+
+.region-sidebar-second .section {
+  /*margin: 0 0 0 20px;*/
+  /* LTR */
+  /*margin: 0 10px 0 10px; /* LTR */
+  /*padding: 0;*/
+  margin: 0 0 0 10px;
+  padding: 10px 0 10px 9px;
+  border-width: 0 0 0 1px;
+  border-style: solid;
+  border-color: #cccccc;
+}
+
+.region-sidebar-second img {
+  padding: 5px 0;
+}
+
+/*
+ * Footer
+ */
+#footer {
+  margin: 0px;
+  padding: 2px;
+  border: none;
+  min-height: 40px;
+  height: auto !important;
+  height: 40px;
+}
+
+#footer-message {
+  padding: 5px 3px;
+}
+
+/*
+ * Bottom
+ */
+#bottom {
+  height: 20px;
+}
+
+/*
+ * Closure
+ */
+.region-page-closure /* See also the #page-wrapper declaration above that this div shares. */
+{
+}
+
+/*
+ * Prevent overflowing content
+ */
+#header,
+#content,
+#navigation,
+#footer,
+.region-sidebar-first,
+.region-sidebar-second,
+.region-page-closure {
+  overflow: visible;
+  word-wrap: break-word; /* A very nice CSS3 property */
+}
+
+#navigation {
+}
+
+/*
+ * If a div.clearfix doesn't have any content after it and its bottom edge
+ * touches the bottom of the viewport, Firefox and Safari will mistakenly
+ * place several pixels worth of space between the bottom of the div and the
+ * bottom of the viewport. Uncomment this CSS property to fix this.
+ * Note: with some over-large content, this property might cause scrollbars
+ * to appear on the #page-wrapper div.
+ */
+/*
+#page-wrapper {
+  overflow-y: hidden;
+}
+*/
+
+/*
+ * orgrightB outer structure specification
+ */
+
+.sidebar-block {
+  left: 0px;
+  width: auto;
+  height: auto;
+  margin: 10px auto 10px auto;
+  border: 0px;
+  padding: 0px;
+}
+
+/*
+ * Following specification allows the main content area to be divided into
+ * two columns of varying width.  First specification is when there is only
+ * one sidebar and main area is 720px wide.  The second specification is
+ * when there are two sidebars and the main area is only 520px wide.
+ */
+.sidebar-first .columns,
+.sidebar-second .columns {
+  position: relative;
+  width: 720px; /* leave room for a 20px margin each side */
+  height: auto;
+  margin: 10px 20px 0px 20px;
+  border: none;
+  overflow: hidden;
+}
+
+.sidebar-first .column1a,
+.sidebar-second .column1a {
+  /* left column = 50% of columns (360px) */
+  position: relative;
+  float: left;
+  width: 340px; /* leave 20px on right */
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  overflow: hidden;
+}
+
+.sidebar-first .column1b,
+.sidebar-second .column1b {
+  /* right column = 50% of columns (360px) */
+  position: relative;
+  float: right;
+  width: 340px; /* leave 20px on left */
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  overflow: hidden;
+}
+
+.sidebar-first .column2a,
+.sidebar-second .column2a {
+  /* left column = 40% of columns (288px)*/
+  position: relative;
+  float: left;
+  width: 268px; /* leave 20px on right */
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  overflow: hidden;
+}
+
+.sidebar-first .column2b,
+.sidebar-second .column2b {
+  /* right column = 60% of columns (432px) */
+  position: relative;
+  float: right;
+  width: 412px; /* leave 20px on left */
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  overflow: hidden;
+}
+
+.sidebar-first .column3a,
+.sidebar-second .column3a {
+  /* left column = 30% of columns (216px) */
+  position: relative;
+  float: left;
+  width: 196px; /* leave 20px on right */
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  overflow: hidden;
+}
+
+.sidebar-first .column3b,
+.sidebar-second .column3b {
+  /* right column = 70% of columns (504px) */
+  position: relative;
+  float: right;
+  width: 484px; /* leave 20px on left */
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  overflow: hidden;
+}

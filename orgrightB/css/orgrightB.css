@@ -1,0 +1,323 @@
+/* $Id$ */
+
+/*
+ * LAYOUT STYLES
+ *
+ * Define CSS classes to contol display of orgRight Service portal information
+ *
+ * Only CSS that affects the layout (positioning) of information elements forming
+ * the body of the orgRight service page should be listed here.  Such as:
+ *   display, position, float, clear, width, height, min-width, min-height
+ *   margin, border, padding, overflow
+ */
+
+/* Basic Global */
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.centre {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -------------------------------- */
+
+.panel-lupper,
+.panel-llower {
+  position: relative;
+  float: left;
+  width: 410px;
+}
+
+.panel-lupper .item,
+.panel-llower .item,
+.panel-lupper .form-item,
+.panel-llower .form-item {
+  position: relative;
+  width: 410px;
+}
+
+.panel-lupper .item-tag,
+.panel-llower .item-tag {
+  float: left;
+  position: relative;
+  width: 100px;
+}
+
+.panel-lupper .item-val,
+.panel-llower .item-val {
+  float: right;
+  position: relative;
+  width: 310px;
+}
+
+/* --------------------------------------- */
+
+.panel-rupper,
+.panel-rlower {
+  position: relative;
+  float: right;
+  width: 350px;
+}
+
+.panel-rupper .item,
+.panel-rlower .item,
+.panel-rupper .form-item,
+.panel-rlower .form-item {
+  position: relative;
+  width: 350px;
+}
+
+.panel-rupper .item-tag,
+.panel-rlower .item-tag {
+  float: left;
+  position: relative;
+  width: 100px;
+}
+
+.panel-rupper .item-val,
+.panel-rlower .item-val {
+  float: right;
+  position: relative;
+  width: 250px;
+}
+
+/* ------------------------------------------------- */
+
+.panel-middle,
+.panel-bottom {
+  position: relative;
+  clear: both;
+  width: 760px;
+}
+
+.panel-middle .item,
+.panel-bottom .item {
+  position: relative;
+  width: 760px;
+}
+
+.panel-middle .body-label {
+  float: left;
+  position: relative;
+}
+
+.panel-middle p {
+  margin: 0.2em 0;
+  float: right;
+  position: relative;
+  width: 650px;
+}
+
+.panel-middle .item-tag,
+.panel-bottom .item-tag {
+  float: left;
+  position: relative;
+  width: 100px;
+}
+
+.panel-bottom .subitem-tag {
+  clear: both;
+  float: left;
+  position: relative;
+  width: auto;
+}
+
+.panel-middle .item-val,
+.panel-bottom .item-val {
+  float: right;
+  position: relative;
+  width: 660px;
+}
+
+.panel-bottom .heading,
+.panel-bottom .form-item {
+  position: relative;
+  width: 760px;
+  clear: both;
+}
+
+.panel-bottom .subitem {
+  position: relative;
+  left: 20px;
+  width: 740px;
+}
+
+.panel-bottom .link {
+  clear: both;
+  position: relative;
+  left: 400px;
+  width: 360px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 0.875em;
+  text-align: right;
+}
+
+.panel-middle .rule-off,
+.panel-bottom .rule-off {
+  width: 760px;
+  margin: 5px 0;
+  padding: 5px 0 0 0;
+  border-width: 1px;
+  border-style: solid none none none;
+  border-color: #cccccc;
+  clear: both;
+}
+
+/* other orgRight stuff */
+
+.content-orgright .item {
+  /*height: 1.6em;*/
+  clear: both;
+}
+
+.content-orgright .item-tag,
+.content-orgright .body-label {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 0.875em;
+}
+
+.content-orgright .item-val,
+.content-orgright .subitem-tag,
+.content-orgright .subitem-val {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.0em;
+}
+
+.content-orgright .notes .item-val,
+.content-orgright .doclinks .item-val {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.0em;
+}
+
+.container-inline-date .date-year,
+.container-inline-date .date-month,
+.container-inline-date .date-day,
+.container-inline-date .form-item {
+  width: auto;
+}
+
+.node-form .form-text,
+.node-form .form-textarea {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.0em;
+}
+
+.content-orgright p {
+  margin: 0.2em 0;
+}
+
+.content-orgright .custom-fields .field-label {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 0.85em;
+}
+
+.content-orgright .custom-fields .field-items {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.0em;
+  margin-left: 1.0em;
+  margin-bottom: 0.5em;
+}
+
+.panel-bottom .custom-fields .field-label {
+  clear: both;
+  float: left;
+  position: relative;
+  width: auto;
+}
+
+.panel-bottom .custom-fields .field-items {
+  float: left;
+  position: relative;
+  width: auto;
+}
+
+/* special formatting for the aubergine footer bar */
+#footer .section a,
+#footer .section a:hover,
+#footer .section a:active,
+#footer .section a:visited {
+  color: #FFFFFF;
+}
+
+/* meeting agenda display specifications */
+.agenda-display {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.0em;
+}
+
+.agenda-header {
+}
+
+.agenda-content {
+}
+
+.agenda-annexes {
+
+}
+
+.agenda-h1 {
+  height: 1.6em;
+  margin: 20px 0 5px;
+  font-weight: bold;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.agenda-h2 {
+  height: 1.2em;
+  margin: 5px 0;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.agenda-content .agenda-h2,
+.agenda-annexes .agenda-h2 {
+  text-align: left;
+}
+
+.agenda-h3 {
+  height: 1.2em;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.agenda-item {
+  font-weight: bold;
+}
+
+.agenda-doclinks {
+}
+
+.agenda-docdesc {
+  margin: 5px 0 5px 10px;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.agenda-docbody {
+  margin: 5px 0 5px 10px;
+  font-size: 0.9em;
+}

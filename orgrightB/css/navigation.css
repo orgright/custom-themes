@@ -1,0 +1,78 @@
+/**
+ * @file
+ * Navigation Styling
+ *
+ * Default menu styling (ul.menu) is defined in system-menus.css.
+ */
+
+/*
+ * The active item in a Drupal menu
+ */
+li a.active {
+  color: #222;
+}
+
+/*
+ * Navigation bar
+ */
+#navigation {
+}
+
+.region-navigation {
+}
+
+/* Main Menu stuff */
+#main-menu {
+}
+
+#main-menu li {
+  position: relative;
+}
+
+#main-menu li ul {
+  position: absolute;
+  visibility: hidden;
+  z-index: 100;
+  left: 0px;
+  top: 44px;
+  background-image: none;
+  /*background-color: #f3811f;*/
+  background-color: #f2ca89;
+}
+
+#main-menu li ul li {
+  width: 100%;
+}
+
+#main-menu li ul li a {
+  background-image: none;
+  white-space: nowrap;
+}
+
+#main-menu li:hover>ul {
+  visibility: visible;
+}
+
+#main-menu li ul,
+#main-menu li ul li {
+  display: block;
+}
+
+/*
+ * Primary and Secondary menu links
+ */
+#secondary-menu {
+}
+
+/*
+ * Menu blocks
+ */
+.block-menu {
+}
+
+/*
+ * "Menu block" blocks. See http://drupal.org/project/menu_block
+ */
+.block-menu_block {
+}
+
